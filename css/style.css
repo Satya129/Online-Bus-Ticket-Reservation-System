@@ -1,0 +1,175 @@
+span.blinking
+{
+	animation:blinkingText 0.9s infinite;
+}
+@keyframes blinkingText
+{
+	0%{color:#000;}
+	49%{color:red;}
+	50%{color:blue;}
+	99%{color:green;}
+	100%{color:#000;}
+}
+@keyframes blink {
+    0% { box-shadow: 0 0 15px green; }
+    50% { box-shadow: 0 0 0; }
+    100% { box-shadow: 0 0 15px green; }
+}
+
+@-webkit-keyframes blink {
+    0% { box-shadow: 0 0 15px green; }
+    50% { box-shadow: 0 0 0; }
+    100% { box-shadow: 0 0 15px green; }
+}
+
+.blink {
+    -webkit-animation: blink 1.0s linear infinite;
+    animation: blink 1.0s linear infinite;
+}
+h3
+{
+	text-align:center;
+	
+}
+.custom-row{
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.custom-nav{
+	width:100%;
+	list-style:none;
+}
+
+.custom-nav li {
+	padding:7px;
+	margin-left: 7px;
+	background: #0cb1ff;
+	box-shadow:0px 0px 10px 1px rgba(0,0,0,0.3);
+}
+
+.custom-nav li a{
+	text-decoration:none;
+	font-size:18px;
+	color:white;
+}
+div.modal fade
+{
+	display: block;
+ 	height: 700px;
+ 	width: 700px;
+ 	margin-left: 380px;
+}
+body
+{
+	background-color:#EDF;
+}
+.white_bg_one
+{
+	background:white;
+}
+.gray_bg_one
+{
+	background:#99d4e430;
+}
+.image-responsive
+{
+	margin-top:-55px;
+	margin-left:-175px;
+}
+.img
+{
+	margin-top:-55px;
+	margin-left:800px;
+}
+.option_div
+{
+	height: 430px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px gray;
+}
+.pad-10
+{
+	padding: 10px;
+}
+.custom-row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+
+.typewriter  {
+	font-size:15px;
+  	color: #df891e;
+  	font-weight:bold;
+  	font-family: verdana;
+  	overflow: hidden;
+ // border-right: .15em solid orange;
+  	white-space: nowrap; 
+  	margin: 0 auto; 
+  	letter-spacing: .15em; 
+  	animation: typing 3.5s steps(30, end);
+}
+@keyframes typing {
+  	from { width: 0 }
+  	to { width: 40% }
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+$("#modalDiv").printThis({ 
+    debug: false,              
+    importCSS: true,             
+    importStyle: true,         
+    printContainer: true,       
+    loadCSS: "../css/style.css", 
+    pageTitle: "My Modal",             
+    removeInline: false,        
+    printDelay: 333,            
+    header: null,             
+    formValues: true          
+}); 
+@media print {
+    .modal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        overflow: visible!important;
+    }
+}
+@media print {
+    /* on modal open bootstrap adds class "modal-open" to body, so you can handle that case and hide body */
+    body.modal-open {
+        visibility: hidden;
+    }
+
+    body.modal-open .modal .modal-header,
+    body.modal-open .modal .modal-body {
+        visibility: visible; /* make visible modal body and header */
+    }
+}
+$("#modalDiv").printThis({ 
+    debug: false,              
+    importCSS: true,             
+    importStyle: true,         
+    printContainer: true,       
+    loadCSS: "../css/style.css", 
+    pageTitle: "My Modal",             
+    removeInline: true,        
+    printDelay: 333,            
+    header: null,             
+    formValues: true          
+});
+
+
+/*End Of CSS  */
